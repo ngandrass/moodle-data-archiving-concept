@@ -1,0 +1,76 @@
+site_name: Moodle Data Archiving Concept
+site_url: http://localhost/
+repo_url: https://github.com/ngandrass/moodle-data-archiving-concept
+edit_uri: edit/master/docs/
+
+copyright: "Copyright &copy; 2024 Niels Gandraß<br>License: GNU General Public License v3.0"
+
+extra:
+  social:
+    - icon: simple/moodle
+      link: https://moodle.org/plugins/quiz_archiver
+      name: "Moodle Plugin Directory: quiz_archiver"
+    - icon: fontawesome/brands/github
+      link: https://github.com/ngandrass/moodle-quiz_archiver
+      name: "GitHub: moodle-quiz_archiver"
+    - icon: fontawesome/brands/github
+      link: https://github.com/ngandrass/moodle-quiz-archive-worker
+      name: "GitHub: moodle-quiz-archive-worker"
+
+#   version:
+#     provider: mike
+
+plugins:
+  # - mike
+  - glightbox:
+      shadow: true
+  - search
+  - social
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - content.action.edit
+    - content.code.copy
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      primary: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - css/extra.css
+
+nav:
+  - "Introduction": index.md
+  - "Changelog": changelog.md
