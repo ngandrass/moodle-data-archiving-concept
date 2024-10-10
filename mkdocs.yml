@@ -74,3 +74,18 @@ extra_css:
 nav:
   - "Introduction": index.md
   - "Changelog": changelog.md
+
+  - "Requirements":
+    - requirements/index.md
+    - "Stakeholder Workshop": requirements/stakeholder-workshop.md
+    - "Data Analysis": requirements/data-analysis.md
+    - "Base Requirements": requirements/base-requirements.md
+
+  - "Architecture":
+    - architecture/index.md
+    - "Components":
+      - architecture/components/foo.md
+      - architecture/components/bar.md
+      - architecture/components/baz.md
+    - "Interfaces (APIs)":
+      - architecture/interfaces/foo.md
