@@ -84,8 +84,8 @@ nav:
 
   - "Requirements":
     - requirements/index.md
-    - "Stakeholder Workshop": requirements/stakeholder-workshop.md
     - "Data Analysis": requirements/data-analysis.md
+    - "User Stories": requirements/user-stories.md
     - "Base Requirements": requirements/base-requirements.md
 
   - "Architecture":

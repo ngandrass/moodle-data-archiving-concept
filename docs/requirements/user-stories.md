@@ -1,6 +1,8 @@
-# Stakeholder Workshop
+# User Stories
 
-TODO
+This section contains user stories that were identified during a stakeholder workshop which was conducted with
+e-learning personal and IT administrators of different German-speaking universities.
+
 
 ## Stakeholders
 
