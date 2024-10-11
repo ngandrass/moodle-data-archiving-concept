@@ -10,14 +10,14 @@ flowchart TB
         %% States
         manager[<tt>Moodle Plugin</tt><br>Course Archiving Manager]
         eventsapi[[<tt>Core API</tt><br>Moodle Events API]]
-        assessmentarchiver[<tt>Moodle Plugin</tt><br>Assessment Archiver]
+        assignmentarchiver[<tt>Moodle Plugin</tt><br>Assignment Archiver]
         quizarchiver[<tt>Moodle Plugin</tt><br>Quiz Archiver]
         anotherarchiver[<tt>Moodle Plugin</tt><br>Another Archiver]
         
         %% Connections
         manager <--> eventsapi
         eventsapi <--> quizarchiver
-        eventsapi <--> assessmentarchiver
+        eventsapi <--> assignmentarchiver
         eventsapi <-.-> anotherarchiver
         
         %% Styles

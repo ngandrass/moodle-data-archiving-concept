@@ -43,7 +43,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="zBMR9Xl9BZe3JkmsXcy5-9" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 12px;&quot;&gt;&amp;lt;&amp;lt; Moodle Plugin &amp;gt;&amp;gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;Assessment Archiver&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=2;" parent="zBMR9Xl9BZe3JkmsXcy5-1" vertex="1">
+        <mxCell id="zBMR9Xl9BZe3JkmsXcy5-9" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 12px;&quot;&gt;&amp;lt;&amp;lt; Moodle Plugin &amp;gt;&amp;gt;&lt;/font&gt;&lt;div style=&quot;&quot;&gt;Assignment Archiver&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=2;" parent="zBMR9Xl9BZe3JkmsXcy5-1" vertex="1">
           <mxGeometry x="25" y="350" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="zBMR9Xl9BZe3JkmsXcy5-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" parent="zBMR9Xl9BZe3JkmsXcy5-1" source="zBMR9Xl9BZe3JkmsXcy5-10" target="zBMR9Xl9BZe3JkmsXcy5-4" edge="1">
