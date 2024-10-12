@@ -38,7 +38,8 @@ student after each attempt, and to show the correct answers after the quiz is cl
     For more information on the Quiz activity see
     [Moodle Docs: Quiz activity](https://docs.moodle.org/en/Quiz_activity)
 
-### Data Relationships
+### Data Structure
+
 - Quiz
     - Quiz metadata (title, description, ...)
     - Questions
@@ -47,7 +48,7 @@ student after each attempt, and to show the correct answers after the quiz is cl
         - Attempt status
         - User metadata (id, name, email, matriculation number, ...)
         - Questions (question text, answer options, ...)
-        - Question answer file attachments [^1]
+        - Question answer file attachments [^2]
         - Answers
         - Response history
         - Feedback
@@ -58,7 +59,7 @@ student after each attempt, and to show the correct answers after the quiz is cl
         - Manual question mark overrides and teacher comments
         - Attempt grade (summative)
 
-[^1]: Only applies to essay questions when considering Moodle core question types. Might apply to other third party
+[^2]: Only applies to essay questions when considering Moodle core question types. Might apply to other third party
 question types.
 
 
