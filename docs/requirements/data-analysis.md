@@ -6,16 +6,20 @@ the context of a Moodle activity. Identified types of data are briefly described
 
 ## Activity: Assignment
 
-See [Moodle Docs: Assignment activity](https://docs.moodle.org/en/Assignment_activity)
-
 TODO
+
+!!! info "Official Documentation"
+    For more information on the Assignment activity see
+    [Moodle Docs: Assignment activity](https://docs.moodle.org/en/Assignment_activity)
 
 
 ## Activity: Choice
 
-See [Moodle Docs: Choice activity](https://docs.moodle.org/en/Choice_activity)
-
 TODO
+
+!!! info "Official Documentation"
+    For more information on the Choice activity see
+    [Moodle Docs: Choice activity](https://docs.moodle.org/en/Choice_activity)
 
 
 ## Activity: Quiz
@@ -31,7 +35,8 @@ graded automatically or manually by the teacher. The Quiz activity can also be c
 student after each attempt, and to show the correct answers after the quiz is closed.
 
 !!! info "Official Documentation"
-    For more information on the Quiz activity see [Moodle Docs: Quiz activity](https://docs.moodle.org/en/Quiz_activity)
+    For more information on the Quiz activity see
+    [Moodle Docs: Quiz activity](https://docs.moodle.org/en/Quiz_activity)
 
 ### Data Relationships
 - Quiz
@@ -75,14 +80,18 @@ erDiagram
 
 ## Activity: Workshop
 
-See [Moodle Docs: Workshop activity](https://docs.moodle.org/en/Workshop_activity)
-
 TODO
+
+!!! info "Official Documentation"
+    For more information on the Workshop activity see
+    [Moodle Docs: Workshop activity](https://docs.moodle.org/en/Workshop_activity)
 
 
 ## Course Completion and Grades
 
-See [Moodle Docs: Course completion](https://docs.moodle.org/en/Course_completion) and
-[Moodle Docs: Grades](https://docs.moodle.org/en/Grade)
-
 TODO
+
+!!! info "Official Documentation"
+    For more information on Course completion and Grades in Moodle see
+    [Moodle Docs: Course completion](https://docs.moodle.org/en/Course_completion) and
+    [Moodle Docs: Grades](https://docs.moodle.org/en/Grade)
