@@ -6,11 +6,60 @@ the context of a Moodle activity. Identified types of data are briefly described
 
 ## Activity: Assignment
 
-TODO
+Assignments allow students to submit work to their teacher for grading. The work may be a text typed online or uploaded
+files of any type. Having both a written text response and a file submission simultaneously is also possible.
+
+Besides a rich-HTML question text, teachers can include additional / template files for students to download. The
+provided assignment files are identical for all students that submit their work.
+
+Grading may be by simple percentages or custom scales, or more complex rubrics may be used. Students may submit as
+individuals or in groups. Feedback can be given in form of any combination of the following: text feedback,
+annotated PDF, teacher-uploaded grading worksheets[^1], or feedback files uploaded by the teacher.
+
+If the assignment requires uploading PDF files, the teacher can annotate the PDFs directly within Moodle. Moodle
+automatically generates the annotated PDF files and saves them to be downloaded by teachers and students.
 
 !!! info "Official Documentation"
     For more information on the Assignment activity see
     [Moodle Docs: Assignment activity](https://docs.moodle.org/en/Assignment_activity)
+
+[^1]: Grading worksheets are CSV files that can be downloaded, filled out, and uploaded back to Moodle. The assigned
+grades and feedback texts are simply imported into the Moodle activity. The grading worksheet is discarded afterwards,
+hence requires no special handling during archiving.
+
+### Data Structure
+
+- Assignment activity
+    - Assignment metadata (title, description, ...)
+    - Assignment instructions
+    - Assignment files (additional / template files for students to download)
+    - Submissions
+        - Submission metadata (user, submission time, ...)
+        - Submission status (not submitted, submitted for grading, graded, ...)
+        - User metadata (id, name, email, matriculation number, ...)
+        - Group metadata (users inside the group)
+        - Text submissions
+        - File submissions (any type, often PDF)
+        - Submission comments
+        - Feedback comments
+        - Grade
+        - Annotated PDF files
+        - Feedback files
+
+##### High-level overview of central data relationships in the Assignment activity
+
+```mermaid
+erDiagram
+  Assignment ||--o{ Submission : has
+  Assignment ||--o{ "Assignment File" : has
+        
+  Submission }o--|{ "User / Group" : "belongs to"
+  Submission ||--o| "Text Submission" : has
+  Submission ||--o{ "File Submission" : has
+  Submission ||--o| Grade : has
+  Grade ||--o| "Annotated PDF" : extends
+  Grade ||--o{ "Feedback File" : extends
+```
 
 
 ## Activity: Choice
