@@ -120,7 +120,7 @@ student after each attempt, and to show the correct answers after the quiz is cl
 
 ### Data Structure
 
-- Quiz
+- Quiz activity
     - Quiz metadata (title, description, ...)
     - Questions
     - Attempts
@@ -143,19 +143,20 @@ student after each attempt, and to show the correct answers after the quiz is cl
 question types.
 
 
-**High-level overview of central data relationships in the Quiz activity**
+##### High-level overview of central data relationships in the Quiz activity
+
 ```mermaid
 erDiagram
-  Quiz ||--o{ Attempt : has
-  Quiz ||--|{ Question : has
+    Quiz ||--o{ Attempt : has
+    Quiz ||--|{ Question : has
 
-  Attempt }o--|| User : "belongs to"
-  Attempt ||--|{ "Question Instance" : has
-  Attempt ||--o| Grade : has
- 
-  "Question Instance" ||--|{ Answer : has
-  Answer ||--o| Mark : has
-  Answer ||--o| "File Attachment" : has
+    Attempt }o--|| User : "belongs to"
+    Attempt ||--|{ "Question Instance" : has
+    Attempt ||--o| Grade : has
+   
+    "Question Instance" ||--|{ Answer : has
+    Answer ||--o| Mark : has
+    Answer ||--o| "File Attachment" : has
 ```
 
 
@@ -170,9 +171,20 @@ TODO
 
 ## Course Completion and Grades
 
-TODO
+Moodle provides a feature to track activity completion and assign grades on a course level.
+
+Course completion shows if a course has been completed by a given student. It can show the progress a student is making
+towards finishing the course according to specific criteria. The criteria can include meeting an activity's grade level
+or a manual checking "complete" by either the student and/or teacher. The report can also show if the student has
+completed another course(s) that is marked as a "completion dependent" course.
+
+Every course has its own Gradebook which aggregates grades from all gradable activities in the course, allowing the
+teacher to calculate an overall grade for the course.
 
 !!! info "Official Documentation"
     For more information on Course completion and Grades in Moodle see
     [Moodle Docs: Course completion](https://docs.moodle.org/en/Course_completion) and
-    [Moodle Docs: Grades](https://docs.moodle.org/en/Grade)
+    [Moodle Docs: Grades](https://docs.moodle.org/en/Grades)
+
+Since the course completion and gradebook data are aggregates of the data from the activities, they are not considered
+archivable data themselves. Instead, the data from the activities should be archived directly for now.
