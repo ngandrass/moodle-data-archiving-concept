@@ -162,11 +162,119 @@ erDiagram
 
 ## Activity: Workshop
 
-TODO
+The Workshop activity is a powerful peer assessment activity. Students add submissions which are then distributed
+amongst their peers for assessment based on a grading scale specified by the teacher. Students can submit their work as
+text (online editor), uploaded files, or both. The teacher can provide further text based submission instructions.
+
+Each workshop goes through five phases:
+
+  1. **Setup phase**: The teacher sets up the workshop, defines the grading scale, and sets the submission deadline.
+  2. **Submission phase**: Students submit their work and are assigned submissions to assess.
+  3. **Assessment phase**: Students assess the submissions assigned to them.
+  4. **Grading evaluation phase**: The teacher reviews the assessments and can provide feedback and override grades.
+  5. **Closed**: The teacher releases the grades and feedback to the students. Grades are final at this point and ready 
+     to be archived[^4].
+
+Submissions are graded by one or more students, as assigned either manually by the teacher or randomly. Students receive
+two grades: one for their submission and one for their assessment (peer review). The teacher can choose independent
+grading scales for both grades. Students can either enter a grade and a reason or answer a number of yes / no questions
+provided by the teacher via the assessment form. After the assessment phase, teachers can review the assessment and
+provide feedback and override the grades if necessary.
+
+After the teacher reviewed all assessments, the teacher can provide a final conclusion and release the grades and
+feedback to the students. Once this is done, the workshop is considered closed and grades are final.
 
 !!! info "Official Documentation"
     For more information on the Workshop activity see
     [Moodle Docs: Workshop activity](https://docs.moodle.org/en/Workshop_activity)
+
+[^4]: Only workshops in the "Closed" state are considered applicable for archiving. Workshops in other states should
+      never be archived, as submissions and grades may still be subject to changes.
+
+### Data Structure
+
+- Workshop activity
+    - Workshop metadata (title, description, ...)
+    - Workshop state / phase (see above)
+    - Garding settings (grading strategy, grading weights)
+    - Submission instructions
+    - Assessment instructions
+    - Workshop conclusion (global teacher feedback)
+    - Example submissions / assessment examples
+    - Submissions
+        - Submission metadata (user, submission time, ...)
+        - Submission status (not submitted, submitted)
+        - User metadata (id, name, email, matriculation number, ...)
+        - Text submissions
+        - File submissions
+        - Grade for submission
+        - Grade for assessment
+        - Final feedback
+    - Submissions allocation
+        - Submission metadata
+        - Reviewer user(s) metadata
+    - Submission assessment
+        - Submission metadata
+        - Reviewer user metadata
+        - Assessment aspects
+            - Aspect grade
+            - Aspect comment
+        - Overall grade
+        - Overall feedback
+
+
+##### High-level overview of central data relationships in the Workshop activity
+
+```mermaid
+erDiagram
+    Workshop ||--o{ Submission : has
+    Workshop ||--o| "Example Assessment" : has
+    Workshop ||--o{ "Submission Allocation" : has
+    Workshop ||--o{ "Submission Assessment" : has
+
+    Submission |o--|| User : submitted
+    Submission ||--o{ "File Attachment" : has
+    
+    "Submission Allocation" }|--|{ User : "is reviewer"
+    "Submission Allocation" ||--|| Submission : "assigned to"
+    
+    "Submission Assessment" }o--|| "Submission Allocation" : "based on"
+    "Submission Assessment" ||--o| "Assessment Aspect" : has
+    
+    "Example Assessment" ||--o| "Submission Assessment" : references
+    
+    Workshop {
+        mixed metadata
+        enum state
+        mixed grading_settings
+        string submission_instructions
+        string assessment_instructions
+        string conclusion
+    }
+    
+    Submission {
+        mixed metadata
+        enum status
+        string text_submission
+        float submission_grade
+        float assessment_grade
+        string final_feedback
+    }
+    
+    "Submission Assessment" {
+        int overall_grade
+        string overall_feedback
+    }
+    
+    "Assessment Aspect" {
+        int grade
+        string comment
+    }
+    
+    User {
+        mixed metadata
+    }
+```
 
 
 ## Course Completion and Grades
