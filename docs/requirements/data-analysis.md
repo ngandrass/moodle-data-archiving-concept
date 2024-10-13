@@ -64,11 +64,42 @@ erDiagram
 
 ## Activity: Choice
 
-TODO
+The Choice activity allows you to ask a question and set up radio buttons which learners can click to make a selection
+from a number of possible responses. They can choose one or more options, depending on the activity settings. Choices
+can be useful as quick poll to stimulate thinking about a topic, to allow the class to vote on a direction
+for the course, or to lock decision about personal topic focus.
+
+It is possible to allow students to update their prior to a given date and time. Results can optionally be published
+alongside all students. 
 
 !!! info "Official Documentation"
     For more information on the Choice activity see
     [Moodle Docs: Choice activity](https://docs.moodle.org/en/Choice_activity)
+
+### Data Structure
+
+- Choice activity 
+    - Choice metadata (title, description, ...)
+    - Options (possible responses)
+    - Choices / responses
+        - User metadata (id, name, email, matriculation number, ...)
+        - Selected option
+        - Response date and time[^3]
+
+[^3]: The response date and time is the time when the user submitted their choice. This data is not exposed via the
+Moodle UI but can be retrieved from the database.
+
+
+
+##### High-level overview of central data relationships in the Choice activity
+
+```mermaid
+erDiagram
+    Choice ||--|{ Option : has
+    Choice ||--o{ Response : has
+  
+    Response }o--|| User : "belongs to"
+```
 
 
 ## Activity: Quiz
