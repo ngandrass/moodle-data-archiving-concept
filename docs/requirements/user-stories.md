@@ -30,9 +30,14 @@ TODO
 !!! abstract "[US-SC-00] Archiving quiz attempts"
     As a <b>teacher</b>, I want to archive quiz attempts as PDF files.
 
+    As a <b>student</b>, I want to store my quiz results to be able to look back at them at a later point in time.
+
 !!! abstract "[US-SC-00] Archiving assignments"
     As a <b>teacher</b>, I want to archive assignments, so that I can have all submissions within a single archive
     without the need to download all files manually.
+    
+    As a <b>student</b>, I want to be able to easily access both the files I submitted and the feedback (e.g., PDF
+    annotations) I received for an assignment.
 
 !!! abstract "[US-SC-00] Enabling or disabling archiving for specific course categories"
     As a <b>Moodle administrator</b>, I want to enable or disable the archiving of quiz attempts and assignments for
@@ -158,6 +163,16 @@ TODO
     As a <b>system administrator</b>, I want the archives to be automatically transferred into external systems, so that
     the archives do not take up too much space on the server and I do not have to manually transfer data.
 
+!!! abstract "[US-AU-00] Parallel processing"
+    As a <b>system administrator</b>, I want that multiple archiving jobs can be processed in parallel, so that the
+    larger jobs can be processed faster, and they do not block smaller jobs for too long.
+
+    As a <b>system administrator</b>, I want to be able to adjust the number of parallel jobs, so that I can control the
+    resourece consumption on the server.
+
+    As a <b>teacher</b>, I want archiving jobs to start as soon as I enqueue them, so that I can access the archived
+    data in a timely manner.
+
 
 ### User Interface and User Experience
 
@@ -220,3 +235,11 @@ TODO
 !!! abstract "[US-AM-00] Easy setup"
     As a <b>system administrator</b> or <b>Moodle administrator</b>, I want the setup of the archiving system to be
     easy, so that I can install and configure the system without requiring too much time and effort.
+
+!!! abstract "[US-AM-00] Configurability and scaling"
+    As a <b>system administrator</b>, I want to control the resource consumption of the archiving system, so that I can
+    ensure that the system does not consume too many resources.
+
+    As a <b>system administrator</b>, I want to be able to easily scale the archiving system, so that I can ensure that
+    the system can handle the load of all Moodle instances at my university, even during exam times, but also scale down
+    during low load times.
