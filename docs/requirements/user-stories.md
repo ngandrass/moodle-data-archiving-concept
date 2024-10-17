@@ -21,11 +21,13 @@ e-learning personal and IT administrators of different German-speaking universit
 
 ## User Stories
 
-TODO
+This section lists the identified user stories.
+
 
 ### Scope
 
-- TODO
+This section lists user stories that define the scope of the archiving system. This includes, for example, the different
+Moodle activities that should be archived and which courses should be archived.
 
 !!! abstract "[US-SC-00] Archiving quiz attempts"
     As a <b>teacher</b>, I want to archive quiz attempts as PDF files.
@@ -46,7 +48,8 @@ TODO
 
 ### Archiv Contents
 
-- TODO
+This section lists user stories that target the contents of the archives. This includes, for example, the types of data
+that should be archived and how the data should be structured.
 
 !!! abstract "[US-AC-00] Matriculation number"
     As a <b>teacher</b>, I want the matriculation number of the student to be included in the archived data, so that I
@@ -84,7 +87,8 @@ TODO
 
 ### File Formats and Data Handling
 
-- TODO
+This section lists user stories that describe the used file formats of the archives and the data within. This includes,
+for example, the container format used to group archived data and the file format of individual files.
 
 !!! abstract "[US-FF-00] ZIP archives"
     As a <b>teacher</b>, I want to have the quiz attempts and assignments archived in ZIP files, so that I can easily
@@ -117,7 +121,9 @@ TODO
 
 ### Data Integrity and Data Protection
 
-- TODO
+This section lists user stories that target the data integrity and data protection requirements of the archives. This,
+for example, includes the compliance with the General Data Protection Regulation (GDPR) and the data integrity of the
+archived data.
 
 !!! abstract "[US-DI-00] GDPR compliance"
     As a <b>legal staff member</b>, I want the archiving process to be compliant with the General Data Protection
@@ -147,7 +153,9 @@ TODO
 
 ### Automation
 
-- TODO
+This section lists user stories that outline the needs for automation of the archiving process. This includes, for
+example, the automatic archiving of quiz attempts and assignments and the automatic transfer of archives into external
+storage systems.
 
 !!! abstract "[US-AU-00] Automated archiving"
     As a <b>teacher</b>, I want the archiving process to be automated, so that I do not have to archive quiz attempts
@@ -176,7 +184,8 @@ TODO
 
 ### User Interface and User Experience
 
-- TODO
+This section lists user stories that describe the user interface and user experience of the archiving system. This, for
+example, includes the overview of archived data and the documentation of the archiving system.
 
 !!! abstract "[US-UI-00] Archive job status updates"
     As a <b>teacher</b>, I want to be able to see the status of the archiving process, so that I can see if the process
@@ -205,7 +214,8 @@ TODO
 
 ### Administration and Maintenance
 
-- TODO
+This section lists user stories that describe the administration and maintenance procedure of the archiving system. This
+includes, for example, the enforcement of corporate policies and the software security of the archiving system.
 
 !!! abstract "[US-AM-00] Reliability and correctness"
     As a <b>teacher</b>, I want the archiving process to be reliable, so that I can trust that all relevant data is
