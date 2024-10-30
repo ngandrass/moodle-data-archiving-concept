@@ -1,5 +1,8 @@
 # Architecture
 
+!!! danger "Work in Progress"
+    This document is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+
 TODO
 
 
