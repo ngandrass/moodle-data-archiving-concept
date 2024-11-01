@@ -10,9 +10,11 @@ e-learning personal and IT administrators of different German-speaking universit
   full access to all exam data.
 - **Student (Examinee)**: Takes exams, receives grades and feedback. Can have access to their own exam data, depending
   on the respective exam and teacher.
+- **Chief Operations Officer (COO)**: Makes executive decisions about the operational activities of the university. This
+  especially includes, but is not limited to, the examination processes and study path organization.
 - **Legal Staff Member**: Responsible for ensuring that the exams themselves, the exam systems, and related procedures
   are compliant with relevant laws and regulations. Does not implement required measures themselves, but provides the
-    necessary information to administrators and teachers.
+  necessary information to administrators and teachers.
 - **Moodle Administrator**: Administrates Moodle instances. Has full administrative access to the Moodle website
   administration.
 - **System Administrator**: Administrates the servers that run a Moodle instance. Has full access to the server and the
