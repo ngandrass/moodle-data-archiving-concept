@@ -82,6 +82,7 @@ extra_css:
 
 nav:
   - "Introduction": index.md
+  - "Existing Solutions": existingsolutions.md
   - "Changelog": changelog.md
 
   - "Requirements":
