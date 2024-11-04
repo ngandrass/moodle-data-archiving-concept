@@ -65,6 +65,11 @@ This section lists existing solutions for archiving data from different Moodle a
 - Allows bulk-downloading of submitted files
 - Limited to files only
 
+### [Assessment Archive](https://github.com/innocampus/moodle-local_assessment_archive)
+
+- Creates Moodle backups (.mbz) of assignments
+- Signs the backups using TSP
+
 
 ## Miscellaneous
 
