@@ -73,4 +73,8 @@ This section lists existing solutions for archiving data from different Moodle a
 
 ## Miscellaneous
 
-TODO
+### [Block „Course Files Archive“ bzw. „Externe Dateiarchivierung](https://collaborate.hn.de/display/PROJMOODLE/Block+Externe+Dateiarchivierung)"
+
+- Allows to store additional arbitrary files that will be part of a course archive
+- Documentation missing
+- See also: [https://github.com/Wunderbyte-GmbH/moodle_blocks_coursefilesarchive](https://github.com/Wunderbyte-GmbH/moodle_blocks_coursefilesarchive)
