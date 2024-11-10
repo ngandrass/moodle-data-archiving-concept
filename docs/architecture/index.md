@@ -113,10 +113,11 @@ TODO
 - Uploads archived data to a FTP server
 
 
-### Archiving Worker
+### Worker Services
 
 - Performs off-loaded archiving tasks, e.g., web page to PDF rendering
 - Communicates via the Moodle Webservice API
+- Usage depends on activity archiving drivers
 
 
 ## Misc
