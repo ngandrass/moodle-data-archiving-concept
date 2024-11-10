@@ -8,7 +8,11 @@ TODO
 
 ## Components
 
+This section describes the different components of the archiving system and their responsibilities. Each component is
+described in detail in its own subsection, linked below every component description.
+
 ![](./architecture-overview.drawio)
+
 
 ### Archiving Manager
 
