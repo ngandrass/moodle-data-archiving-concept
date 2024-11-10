@@ -57,3 +57,49 @@ The archiving manager is the central entry point for archiving tasks.
 
 - [Activity Archiving Drivers](../activity-archiving-drivers)
 - [Storage Drivers](../storage-drivers)
+
+
+## Details
+
+### Archive Job Flow
+
+The following sequence diagram illustrated the basic information flow of a successful archiving job.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User
+    
+    %% User input
+    User ->> Archiving Manager: Request activity archiving
+
+    %% Job start
+    activate Archiving Manager
+    Archiving Manager ->> Archiving Manager: Init archiving job
+    Archiving Manager --) Activity Archiving Driver: Enqueue task
+    deactivate Archiving Manager
+    
+    %% Job processing
+    activate Activity Archiving Driver
+    Activity Archiving Driver ->> Activity Archiving Driver: Process activity data
+    opt Task Offloading
+        Activity Archiving Driver --) Worker Service: Enqueue tasks
+        activate Worker Service
+        Worker Service --) Activity Archiving Driver: Processed data
+        deactivate Worker Service
+    end
+    Activity Archiving Driver --) Archiving Manager: Activity archive
+    deactivate Activity Archiving Driver
+    
+    %% Job postprocessing
+    activate Archiving Manager
+    Archiving Manager ->> Archiving Manager: Finalize archive job
+    Archiving Manager --) Storage Driver: Request archive storing
+    deactivate Archiving Manager
+    activate Storage Driver
+    Storage Driver ->> Storage Driver: Store archive
+    Storage Driver --) Archiving Manager: Storage confirmation
+    deactivate Storage Driver
+    activate Archiving Manager
+    deactivate Archiving Manager
+```
