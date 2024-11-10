@@ -1,17 +1,50 @@
 # Activity Archiving Drivers
 
+The activity archiving drivers are responsible for the actual archiving process of a specific Moodle activity. One such
+driver exists for every Moodle activity that is supported by the archiving system.
+
 !!! warning "TODO"
     This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
 
-- Executes an archiving job
-    - Transforms existing user data into an archivable format
-    - Creates digital archive files
-    - Sends archived data back to the [Archiving Manager](#archiving-manager)
-- Archiving jobs are executed asynchronously
-- Tailored to one specific Moodle activity (e.g., Quiz, Assignment, ...)
+
+## Tasks and Responsibilities
+
+!!! abstract "Activity Data Extraction and Transformation"
+    Transforms existing user data into an archivable format
+    
+    - Collects all relevant data from the activity (metadata, text submissions, files, ...)
+    - Can make use of [Worker Services](../worker-services), if required
+
+!!! abstract "Archive Creation"
+    Creates digital archive files
+    
+    - Created archives are stored inside the Moodledata storage, awaiting further processing by the
+      [Archiving Manager](../archiving-manager)
+
+!!! abstract "Archive Data Formwarding"
+    Sends archived data back to the [Archiving Manager](#archiving-manager) once archiving is completed
+
+!!! abstract "Task Processing"
+    - All archiving jobs are always executed asynchronously
+    - Multiple archiving jobs can be processed in parallel
+
+!!! abstract "Task Configuration"
+    Providing activity-driver-specific configuration options for jobs (e.g., file format, PDF paper size, ...)
+
+!!! abstract "Task Scope / Filtering"
+    Allowing to define the scope of the archived data (e.g., all quiz attempts, only attempts of a specific user, only
+    one specific attempt)
 
 
-## Quiz (mod_quiz)
+## Interfaced Components
+
+- [Archiving Manager](../archiving-manager)
+- [Worker Services](../worker-services) (Optional)
+
+
+## Implementations
+
+### Quiz (mod_quiz)
 
 !!! warning "TODO"
     This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
@@ -28,7 +61,7 @@
 - Based on the Moodle [Quiz Archiver](https://moodle.org/plugins/quiz_archiver) Plugin
 
 
-## Assignment (mod_assign)
+### Assignment (mod_assign)
 
 !!! warning "TODO"
     This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
