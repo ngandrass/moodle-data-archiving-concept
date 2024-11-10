@@ -94,8 +94,9 @@ nav:
   - "Architecture":
     - architecture/index.md
     - "Components":
-      - architecture/components/foo.md
-      - architecture/components/bar.md
-      - architecture/components/baz.md
+      - architecture/components/archiving-manager.md
+      - architecture/components/activity-archiving-drivers.md
+      - architecture/components/worker-services.md
+      - architecture/components/storage-drivers.md
     - "Interfaces (APIs)":
       - architecture/interfaces/foo.md
