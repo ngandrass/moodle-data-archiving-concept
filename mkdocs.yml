@@ -99,4 +99,6 @@ nav:
       - architecture/components/worker-services.md
       - architecture/components/storage-drivers.md
     - "Interfaces (APIs) and Signals":
-      - architecture/interfaces/foo.md
+      - architecture/interfaces/events.md
+      - architecture/interfaces/activity-archiving-drivers.md
+      - architecture/interfaces/storage-drivers.md
