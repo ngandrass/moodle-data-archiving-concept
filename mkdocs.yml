@@ -98,5 +98,5 @@ nav:
       - architecture/components/activity-archiving-drivers.md
       - architecture/components/worker-services.md
       - architecture/components/storage-drivers.md
-    - "Interfaces (APIs)":
+    - "Interfaces (APIs) and Signals":
       - architecture/interfaces/foo.md

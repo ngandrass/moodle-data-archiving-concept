@@ -52,6 +52,12 @@ allow to handle complex transformations, such as rendering and exporting a quiz 
 [:fontawesome-solid-cubes: Component Details](components/worker-services){ .md-button }
 
 
+## Interfaces (APIs) and Signals
+
+!!! warning "TODO"
+    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+
+
 ## Findings
 
 This sections lists various findings and implications that have been discovered during the design phase of the
