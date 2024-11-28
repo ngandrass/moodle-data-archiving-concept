@@ -14,7 +14,7 @@ process.
 
 !!! warning "[REQ-DI-00] Equality of archived and original data"
     The archived data must resemble the original data as closely as possible and no critical information, e.g., grades,
-    must be lost or altered.
+    must be lost or altered. Archived data must only be transformed into an alternate representation when inevitable.
 
 !!! warning "[REQ-DI-00] Static presentation of archived data"
     The presentation of the archived data must not change in the future. Therefore, all data must be fully rendered at

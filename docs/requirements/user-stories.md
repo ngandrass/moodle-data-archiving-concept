@@ -46,9 +46,31 @@ Moodle activities that should be archived and which courses should be archived.
     As a <b>student</b>, I want to be able to easily access both the files I submitted and the feedback (e.g., PDF
     annotations) I received for an assignment.
 
+!!! abstract "[US-SC-00] Additional files"
+    As a <b>teacher</b>, I want to be able to include additional files in the archives, such as seating plans. Such
+    files would be uploaded manually by the teacher prior to or after an exam.
+
+!!! abstract "[US-SC-00] Completeness of archives"
+    As a <b>teacher</b>, <b>student</b>, or <b>legal staff member</b>, I want the archives to include all relevant data
+    that was created during the exam. This includes, for example, exam metadata, questions, final answers, answer
+    history, file submissions, grades, feedback, and more.
+
+!!! abstract "[US-SC-00] Archiving original unprocessed exams"
+    As a <b>legal staff member</b>, I want to have the original, unedited exams that are given to the students at the
+    beginning of an exam archived, so that I can clearly see what was given and what was added by the students.
+
+!!! abstract "[US-SC-00] Enabling or disabling archiving for specific activities"
+    As a <b>Moodle administrator</b> or <b>COO</b>, I want to enable or disable the archiving of specific activities, so that I can
+    ensure that only the relevant data is archived.
+
 !!! abstract "[US-SC-00] Enabling or disabling archiving for specific course categories"
-    As a <b>Moodle administrator</b>, I want to enable or disable the archiving of quiz attempts and assignments for
+    As a <b>Moodle administrator</b> or <b>COO</b>, I want to enable or disable the archiving of quiz attempts and assignments for
     specific course categories, so that I can ensure that only the relevant data (e.g., actual exams) is archived.
+
+!!! abstract "[US-SC-00] Making archiving of certain activities mandatory or optional"
+    As a <b>COO</b> or <b>Moodle administrator</b>, I want to be able to define whether the archiving of certain
+    activities or courses is mandatory or optional, so that I can ensure that all relevant data is always archived but
+    leave <b>teachers</b> the freedom to decide whether they want to archive additional data.
 
 
 ### Archiv Contents
@@ -71,16 +93,36 @@ that should be archived and how the data should be structured.
     As a <b>teacher</b>, I want to be able to customize the contents of the quiz attempt report, so that I can, for
     example, exclude example solutions from PDFs that I hand out to my students.
 
-!!! abstract "[US-AC-00] Quiz question types"
+!!! abstract "[US-AC-00] Quiz question types (Moodle core)"
     As a <b>teacher</b>, I want the quiz attempt reports to support all question types that are available in Moodle, so
     that I can continue using my existing questions.
 
+!!! abstract "[US-AC-00] Quiz question types (third party)"
     As a <b>teacher</b>, I want third party question types to be supported, so that I can also export, for example,
     STACK questions.
+
+    As a <b>Moodle administrator</b>, I want third party question types to be supported alongside the core question
+    types to eliminate the need for custom archiving solutions or hacks.
+
+    _Commonly used and highly requested question types include: STACK, Gapfill, Coderunner, KPrime, Freehand drawing,
+    ..._
 
 !!! abstract "[US-AC-00] Math formulas and other complex content"
     As a <b>teacher</b>, I want the quiz attempt reports to support math formulas and other complex dynamic content,
     e.g., GeoGebra applets.
+
+!!! abstract "[US-AC-00] Rich media content"
+    As a <b>teacher</b>, I want to be able to use rich media content in my exams, such as videos and audio files.
+
+    As a <b>system administrator</b>, I want the archiving system to compress rich media content as much as possible in
+    order to preserve disk space.
+
+!!! abstract "[US-AC-00] Metadata availability"
+    As a <b>teacher</b>, I want the quiz attempt reports to include metadata, such as the date and time of the quiz
+    attempt, the duration, and marks.
+
+    As a <b>legal staff member</b>, I want the quiz attempt reports to include metadata, such as the date and time of the
+    quiz attempt, the duration, and the IP address of the student.
 
 !!! abstract "[US-AC-00] Data searchability"
     As a <b>teacher</b>, I want the data in the archives to be searchable, so that I can easily find specific quiz
@@ -88,6 +130,26 @@ that should be archived and how the data should be structured.
 
     As a <b>teacher</b> or <b>student</b>, I want to be able to search within the contents of quiz attempt reports, so
     that I can easily find specific answers or questions.
+
+!!! abstract "[US-AC-00] Course backups"
+    As a <b>teacher</b>, I want to be able to include a backup of the whole course in the archive, so that I can easily
+    reuse the course in the future.
+
+    As a <b>Moodle administrator</b>, I want to be able to include a backup of the whole course in the archive, so that
+    I can easily restore the course as a whole if this is needed.
+
+!!! abstract "[US-AC-00] Activity backups"
+    As a <b>teacher</b>, I want to be able to include a backup of a single activity in the archive, so that I can easily
+    reuse the activity in the future without the need to restore the whole course.
+
+    As a <b>Moodle administrator</b>, I want to be able to include a backup of a single activity in the archive, so that
+    I can easily restore the activity if this is needed while preserving storage space that would otherwise be wasted by
+    a full course backup that might not be required.
+
+!!! abstract "[US-AC-00] Answer history and log files"
+    As a <b>teacher</b> or <b>legal staff member</b>, I want relevant logs from the exam period to be included in the
+    archive. These logs include but are not limited to: answer histories, question access logs, submission logs,
+    IP addresses, ...
 
 
 ### File Formats and Data Handling
@@ -142,7 +204,8 @@ archived data.
     the far future (5 to 10 years), so that the data can be retrieved in case of legal disputes.
 
     As a <b>system administrator</b>, I want the archives to be stored in a way that is independent of specific software
-    and its versions, so that I do not need to restore an ancient Moodle instance to retrieve data.
+    and its versions, so that I do not need to restore an ancient Moodle instance to retrieve data. This explicitly
+    includes storing the data in a way that is independent of the Moodle LMS.
 
 !!! abstract "[US-DI-00] Data integrity"
     As a <b>legal staff member</b>, I want to be able to verify that the data in the archives has not been tampered with,
@@ -154,6 +217,13 @@ archived data.
 
     As a <b>legal staff member</b>, I want the data to be signed with a digital signature by an external authority, so
     that I can prove the authenticity of the data in court.
+
+!!! abstract "[US-DI-00] Rights management"
+    As a <b>Moodle administrator</b>, I want to be able to define who has access to the archived data, so that I can
+    ensure that only authorized persons can access the data and prevent unauthorized people from deleting archives.
+
+    As a <b>legal staff member</b>, I want to be able to prevent the deletion of archives once created, e.g., through
+    a WORM (write-once-read-many) storage solution.
 
 
 ### Automation
@@ -169,12 +239,34 @@ storage systems.
     As a <b>legal staff member</b>, I want the archiving process to be automated, so that I can ensure that all
     relevant data is always archived and can not be forgotten about.
 
+!!! abstract "[US-AU-00] Configurable trigger for archiving"
+    As a <b>Moodle administrator</b>, I want to be able to specify which events (e.g., end of an exam, finalization of 
+    grades, manual clearance) trigger the archiving process, so that I can adapt the archiving process to the specific
+    processes of my institution.
+
+!!! abstract "[US-AU-00] Archiving reminders"
+    As a <b>teacher</b>, I want to receive a reminder if an activity that should be archived is not yet archived, so
+    that I can ensure that I do not forget to finalize an exam.
+
+    As a <b>Moodle administrator</b> or <b>COO</b>, I want teachers to receive reminders if an activity that should be
+    archived is not yet archived, so that I do not have to manually remind teachers to archive their exams.
+
 !!! abstract "[US-AU-00] Automated transfer into external systems"
     As a <b>legal staff member</b>, I want the archives to be automatically transferred into external systems, such as
     write-once-read-many (WORM) storage or document management systems (DMS), so that the data is stored appropriately.
 
     As a <b>system administrator</b>, I want the archives to be automatically transferred into external systems, so that
     the archives do not take up too much space on the server and I do not have to manually transfer data.
+
+!!! abstract "[US-AU-00] Integration with campus management systems"
+    As a <b>COO</b>, I want the archiving system to be integrated with the campus management system, so that archived
+    data can easily be processed further, e.g., storing it inside a student's digital record file.
+
+    As a <b>teacher</b>, I want the archiving system to be integrated with the campus management system, so that I can
+    easily link the archived exam data to the rest of the student's data.
+
+    As a <b>system administrator</b>, I want the archiving system to be integrated with the campus management system, so
+    that I do not have to develop custom glue logic.
 
 !!! abstract "[US-AU-00] Parallel processing"
     As a <b>system administrator</b>, I want that multiple archiving jobs can be processed in parallel, so that the
@@ -216,6 +308,29 @@ example, includes the overview of archived data and the documentation of the arc
     As a <b>system administrator</b>, I want to have a technical documentation that explains how to install and
     troubleshoot the different components in case of error.
 
+!!! abstract "[US-UI-00] Access to archived data (internal)"
+    As a <b>teacher</b>, I want to be able to access the archived data, so that I can look at the data at a later point
+    in time or use it for a post-exam review.
+
+    As a <b>student</b>, I want to be able to access the archived data, so that I can review my exam performance at a
+    later point and keep a copy for myself.
+
+    As a <b>legal staff member</b>, I want to be able to access the archived data, so that I can retrieve the data in
+    case of legal disputes.
+
+    As a <b>Moodle administrator</b>, I want to be able to access the archived data, so that I can use it for restoring
+    courses or activities.
+
+!!! abstract "[US-UI-00] Access to archived data (external)"
+    As a <b>legal staff member</b>, I want to be able to easily provide access to selected data archives to external
+    third parties, e.g., in case of legal disputes.
+
+    As a <b>legal staff member</b> or <b>system administrator</b>, I want external access to data archives to be logged.
+
+!!! abstract "[US-UI-00] Accessibility"
+    As a <b>teacher</b> or <b>student</b>, I want the archived data to be as accessible ("barrier-free"), as the exam
+    itself to be able to browse the archived data without any problems.
+
 
 ### Administration and Maintenance
 
@@ -251,10 +366,26 @@ includes, for example, the enforcement of corporate policies and the software se
     As a <b>system administrator</b> or <b>Moodle administrator</b>, I want the setup of the archiving system to be
     easy, so that I can install and configure the system without requiring too much time and effort.
 
-!!! abstract "[US-AM-00] Configurability and scaling"
+!!! abstract "[US-AM-00] Easy operations"
+    As a <b>system administrator</b> or <b>Moodle administrator</b>, I want the operation of the archiving system to be
+    easy, so that I can use the system without requiring too much time and effort.
+
+!!! abstract "[US-AM-00] Future maintenance"
+    As a <b>Moodle administrator</b> or <b>system administrator</b>, I want a solution that will be maintained in the
+    foreseeable future, so that I do not have to switch to another system again in a few years.
+
+    As a <b>legal staff member</b> or <b>COO</b>, I want the archiving system to be maintained in the foreseeable future,
+    so that I do not have to evaluate and integrate a new software and archiving process again in a few years.
+
+!!! abstract "[US-AM-00] Configurability and scalability"
     As a <b>system administrator</b>, I want to control the resource consumption of the archiving system, so that I can
     ensure that the system does not consume too many resources.
 
     As a <b>system administrator</b>, I want to be able to easily scale the archiving system, so that I can ensure that
     the system can handle the load of all Moodle instances at my university, even during exam times, but also scale down
     during low load times.
+
+!!! abstract "[US-AM-00] Compatibility with used software"
+    As a <b>system administrator</b>, I want the archiving system to be compatible with my existing software versions,
+    especially the used Moodle version. The archiving solution must at least support all Moodle LTS versions that are
+    currently maintained, including the supported PHP and DBMS versions.
