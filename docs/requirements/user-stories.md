@@ -72,6 +72,13 @@ Moodle activities that should be archived and which courses should be archived.
     activities or courses is mandatory or optional, so that I can ensure that all relevant data is always archived but
     leave <b>teachers</b> the freedom to decide whether they want to archive additional data.
 
+!!! abstract "[US-SC-00] Data from big cohorts"
+    As a <b>teacher</b>, I want the archiving solution to be able to handle event large cohorts of students reliably, so
+    that I do not encounter limitations if my courses have many students.
+
+    As a <b>system administrator</b>, I want the archiving solution to be able to handle large cohorts of students
+    effectively without consuming too many resources or failing due to the size.
+
 
 ### Archiv Contents
 
@@ -151,6 +158,10 @@ that should be archived and how the data should be structured.
     archive. These logs include but are not limited to: answer histories, question access logs, submission logs,
     IP addresses, ...
 
+!!! abstract "[US-AC-00] Anonymization"
+    As a <b>teacher</b>, I want to be able to generated anonymized exports that I can share with colleagues or students,
+    so that I can discuss the results without revealing the identity the respective student.
+
 
 ### File Formats and Data Handling
 
@@ -184,6 +195,10 @@ for example, the container format used to group archived data and the file forma
 !!! abstract "[US-FF-00] PDF/A file format"
     As a <b>legal staff member</b>, I want the archives to be in the `PDF/A` file format, so that the data is stored in
     a standardized format that is designed for long-term data readability.
+
+!!! abstract "[US-FF-00] Watermarks and copy protection"
+    As a <b>teacher</b>, I want to be able to include watermarks or other forms of copy traceability / protection in the
+    archives, so that I can prevent students from sharing their exam results with others or trace back the ones that did.
 
 
 ### Data Integrity and Data Protection
@@ -242,7 +257,7 @@ storage systems.
 !!! abstract "[US-AU-00] Configurable trigger for archiving"
     As a <b>Moodle administrator</b>, I want to be able to specify which events (e.g., end of an exam, finalization of 
     grades, manual clearance) trigger the archiving process, so that I can adapt the archiving process to the specific
-    processes of my institution.
+    processes of my institution. If the trigger is time-based, I want to be able to specify the time freely.
 
 !!! abstract "[US-AU-00] Archiving reminders"
     As a <b>teacher</b>, I want to receive a reminder if an activity that should be archived is not yet archived, so
@@ -295,6 +310,10 @@ example, includes the overview of archived data and the documentation of the arc
     As a <b>Moodle administrator</b>, I want to see if all required activities within a course were already archived
     successfully and if not, I want to be able to start the archiving process.
 
+!!! abstract "[US-UI-00] Archiving history"
+    As a <b>teacher</b>, <b>Moodle administrator</b> or <b>legal staff member</b>, I want to be able to see the history
+    of archiving jobs. I want to be able to identify at which point in time archives were created.
+
 !!! abstract "[US-UI-00] Documentation"
     As a <b>teacher</b>, I want to have a user documentation that explains how to use the archiving system, so that I
     can use the system without having to ask other staff members for help.
@@ -330,6 +349,10 @@ example, includes the overview of archived data and the documentation of the arc
 !!! abstract "[US-UI-00] Accessibility"
     As a <b>teacher</b> or <b>student</b>, I want the archived data to be as accessible ("barrier-free"), as the exam
     itself to be able to browse the archived data without any problems.
+
+!!! abstract "[US-UI-00] User-based views"
+    As a <b>student</b>, <b>teacher</b>, or <b>legal staff member</b>, I want to be able to view and retrieve all
+    archived data that is associated with a single student.
 
 
 ### Administration and Maintenance
