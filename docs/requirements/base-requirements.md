@@ -4,6 +4,8 @@ This section describes base requirements for the archiving solution and the data
 apply to all archivable data, regardless of the specific Moodle activity it originates from. Therefore, this set of
 requirements can be extended by additional requirements for specific Moodle activities.
 
+!!! warning "TODO"
+    Assign final IDs to base requirements before release
 
 ## Data Integrity
 
