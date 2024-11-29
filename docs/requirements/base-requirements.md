@@ -4,6 +4,10 @@ This section describes base requirements for the archiving solution and the data
 apply to all archivable data, regardless of the specific Moodle activity it originates from. Therefore, this set of
 requirements can be extended by additional requirements for specific Moodle activities.
 
+This set of requirements underpin each of the [user stories](../user-stories) but do not directly map to them. Instead,
+they are meant as a framework of standards that the archiving solution must adhere to with every feature that is
+implemented or define specific technical standards that must be met.
+
 !!! warning "TODO"
     Assign final IDs to base requirements before release
 

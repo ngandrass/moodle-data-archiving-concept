@@ -1,7 +1,11 @@
 # User Stories
 
 This section contains user stories that were identified during a stakeholder workshop which was conducted with
-e-learning personal and IT administrators of different German-speaking universities.
+e-learning personal and IT administrators of various universities from Germany, Austria, and Switzerland. The user
+stories are structured into different categories, each focusing on a specific aspect of the archiving ecosystem.
+
+Together with the [generic base requirements](../base-requirements), they form the base for formulating concrete
+feature requests for and to establish the technical architecture drafts of the aspired archiving solution on.
 
 
 ## Stakeholders
