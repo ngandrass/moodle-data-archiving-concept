@@ -4,7 +4,7 @@ This section describes base requirements for the archiving solution and the data
 apply to all archivable data, regardless of the specific Moodle activity it originates from. Therefore, this set of
 requirements can be extended by additional requirements for specific Moodle activities.
 
-This set of requirements underpin each of the [user stories](../user-stories) but do not directly map to them. Instead,
+This set of requirements underpin each of the [user stories](../user-stories), but do not directly map to them. Instead,
 they are meant as a framework of standards that the archiving solution must adhere to with every feature that is
 implemented or define specific technical standards that must be met.
 
@@ -85,7 +85,8 @@ the compatibility of the archiving solution with external systems.
     Archives must be kept, even if the Moodle course or activity is deleted.
 
 !!! warning "[REQ-CA-04] Transferring archived data"
-    Archives must be transferable to external third party systems, such as network storages or document managementsystems.
+    Archives must be transferable to external third party systems, such as network storages or document management
+    systems.
 
 !!! warning "[REQ-CA-05] Open data formats"
     If an archiving process requires transforming data into a different format, an open format must be used to ensure that
@@ -106,7 +107,7 @@ and are less likely to become fully unavailable in the foreseeable future.
 
 ## Data Protection, Regulatory, and Privacy
 
-This section focuses on regulatory and privacy aspects of the archiving solution as well as data protection aspects.
+This section focuses on regulatory and privacy aspects of the archiving solution, as well as data protection aspects.
 
 !!! warning "[REQ-DP-01] GDPR compliance"
     The archiving process must comply with the general data protection regulation (GDPR).
@@ -118,7 +119,7 @@ This section focuses on regulatory and privacy aspects of the archiving solution
     Archived data should automatically be deleted after the legal retention period.
 
 !!! warning "[REQ-DP-04] Policies"
-    Global archiving policies must be enforceable to ensure that all data is archived according to the institutions 
+    Global archiving policies must be enforceable to ensure that all data is archived according to the institution's 
     regulations and policies. This includes, but is not limited to, the retention period of the data, the obligatory
     data that is always archived, the way data is stored, and the way data is accessed.
 

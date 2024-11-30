@@ -181,7 +181,7 @@ that should be archived and how the data should be structured.
 
 !!! abstract "[US-AC-13] Anonymization {{demand_low}}"
     As a <b>teacher</b>, I want to be able to generated anonymized exports that I can share with colleagues or students,
-    so that I can discuss the results without revealing the identity the respective student.
+    so that I can discuss the results without revealing the identity of the respective student.
 
 
 ### File Formats and Data Handling
@@ -330,10 +330,10 @@ storage systems.
     larger jobs can be processed faster, and they do not block smaller jobs for too long.
 
     As a <b>system administrator</b>, I want to be able to adjust the number of parallel jobs, so that I can control the
-    resourece consumption on the server.
+    resource consumption on the server.
 
-    As a <b>teacher</b>, I want archiving jobs to start as soon as I enqueue them, so that I can access the archived
-    data in a timely manner.
+    As a <b>teacher</b>, I want archiving jobs to be processed as soon as I initiate them, so that I can access the
+    archived data in a timely manner.
 
 
 ### User Interface and User Experience
@@ -413,10 +413,11 @@ includes, for example, the enforcement of corporate policies and the software se
 
 !!! abstract "[US-AM-01] Reliability and correctness {{demand_mandatory}}"
     As a <b>teacher</b>, I want the archiving process to be reliable, so that I can trust that all relevant data is
-    archived and I do not have to worry about it.
+    archived, and I do not have to worry about it.
 
-    As a <b>legal staff member</b>, I want the archiving process to be automatically testet to work correctly, so that I
-    can trust that the data is archived correctly and can be retrieved in case of legal disputes.
+    As a <b>legal staff member</b>, I want the archiving software to be reliablly tested to ensure that it works
+    correctly. Otherwise I can not trust that the data is archived correctly and can be retrieved and used in case of
+    legal disputes.
 
     As a <b>Moodle administrator</b>, I want to know which versions of Moodle, PHP, and my DBMS are tested and work.
 
