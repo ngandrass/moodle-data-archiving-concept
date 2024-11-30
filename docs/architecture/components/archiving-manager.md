@@ -76,17 +76,19 @@ sequenceDiagram
     %% Job start
     activate Archiving Manager
     Archiving Manager ->> Archiving Manager: Init archiving job
-    Archiving Manager --) Activity Archiving Driver: Enqueue task
+    Archiving Manager -) Activity Archiving Driver: Enqueue task
     deactivate Archiving Manager
     
     %% Job processing
     activate Activity Archiving Driver
     Activity Archiving Driver ->> Activity Archiving Driver: Process activity data
     opt Task Offloading
-        Activity Archiving Driver --) Worker Service: Enqueue tasks
+        Activity Archiving Driver -) Worker Service: Enqueue tasks
+        deactivate Activity Archiving Driver
         activate Worker Service
-        Worker Service --) Activity Archiving Driver: Processed data
+        Worker Service -->> Activity Archiving Driver: Processed data
         deactivate Worker Service
+        activate Activity Archiving Driver
     end
     Activity Archiving Driver --) Archiving Manager: Activity archive
     deactivate Activity Archiving Driver
@@ -94,7 +96,7 @@ sequenceDiagram
     %% Job postprocessing
     activate Archiving Manager
     Archiving Manager ->> Archiving Manager: Finalize archive job
-    Archiving Manager --) Storage Driver: Request archive storing
+    Archiving Manager -) Storage Driver: Request archive storing
     deactivate Archiving Manager
     activate Storage Driver
     Storage Driver ->> Storage Driver: Store archive
