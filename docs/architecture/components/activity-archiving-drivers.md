@@ -52,6 +52,7 @@ driver exists for every Moodle activity that is supported by the archiving syste
 - Exports quiz attempts as fully-rendered PDF files
 - Support for complex content and question types, including Drag and Drop, MathJax formulas, STACK plots, and other
   question / content types that require JavaScript processing
+- Exports answer history, marks, comments, and feedback
 - Support for file submissions / attachments (e.g., essay files)
 - Customization of generated PDF and HTML reports
 - Quiz attempt reports are fully text-searchable, including mathematical formulas
