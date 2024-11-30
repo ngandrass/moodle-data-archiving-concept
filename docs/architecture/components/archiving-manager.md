@@ -105,3 +105,56 @@ sequenceDiagram
     activate Archiving Manager
     deactivate Archiving Manager
 ```
+
+### External Event Connector Integration
+
+The following sequence diagram illustrates the way external event connectors integrate into the archiving system. We use
+the event triggered after a new archive has been stored successfully as an example.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Storage Driver
+    participant Archiving Manager
+    participant Moodle Events API
+    participant External Event Connector
+    participant External System
+    
+    %% Event Trigger
+    activate Storage Driver
+    Storage Driver ->> Storage Driver: Do something
+    Storage Driver -) Moodle Events API: Trigger Event: Stored Archive
+    deactivate Storage Driver
+    
+    %% Event Propagation
+    activate Moodle Events API
+    Moodle Events API -) Archiving Manager: Propagate Event: Archive Stored
+    activate Archiving Manager
+    Moodle Events API -) External Event Connector: Propagate Event: Archive Stored
+    activate External Event Connector
+    deactivate Moodle Events API
+    
+    %% Event Handling
+    Archiving Manager ->> Archiving Manager: Do something
+    deactivate Archiving Manager
+    
+    External Event Connector ->> External Event Connector: Transform Data
+    External Event Connector ->> External System: Trigger Action
+    activate External System
+    External System ->> External System: Do something
+    External System --) External Event Connector: Action Result
+    deactivate External System
+
+    opt Error Handling
+        External Event Connector -) Moodle Events API: Trigger Event: Error
+        deactivate External Event Connector
+        activate Moodle Events API
+        Moodle Events API -) Archiving Manager: Propagate Event: Error
+        deactivate Moodle Events API
+        activate Archiving Manager
+        Archiving Manager ->> Archiving Manager: Handle Error
+        deactivate Archiving Manager
+    end
+
+
+```
