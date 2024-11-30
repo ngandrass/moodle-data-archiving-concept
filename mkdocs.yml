@@ -87,12 +87,15 @@ extra_css:
 
 nav:
   - "Introduction": index.md
-  - "Existing Solutions": existingsolutions.md
   - "Changelog": changelog.md
+
+  - "Analysis":
+      - analysis/index.md
+      - "Existing Solutions": analysis/existingsolutions.md
+      - "Data Analysis": analysis/data-analysis.md
 
   - "Requirements":
     - requirements/index.md
-    - "Data Analysis": requirements/data-analysis.md
     - "User Stories": requirements/user-stories.md
     - "Base Requirements": requirements/base-requirements.md
 

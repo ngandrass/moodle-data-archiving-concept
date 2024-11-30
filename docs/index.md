@@ -1,3 +1,17 @@
 # Moodle Data Archiving Concept
 
-TODO ;)
+This collection of documents describes an extensive concept for archiving data from various Moodle activities for
+long-term storage independent of Moodle.
+
+It is divided into the following chapters:
+
+[:material-flask: (1) Analysis of Technical Landscape](analysis){.md-button}
+
+[:material-clipboard-list-outline: (2) Requirements Engineering](requirements){.md-button}
+
+[:material-floor-plan: (3) Architecture and Technical Specification](architecture){.md-button}
+
+<!-- [:material-cogs: (4) Implementation](implementation){.md-button} -->
+
+_You can navigate to each section using the buttons above or jump to each document individually using the tree
+navigation on the left side._
