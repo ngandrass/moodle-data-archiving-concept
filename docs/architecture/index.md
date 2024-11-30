@@ -52,6 +52,19 @@ allow to handle complex transformations, such as rendering and exporting a quiz 
 [:fontawesome-solid-cubes: Component Details](components/worker-services){ .md-button }
 
 
+### External Event Connectors
+
+External event connectors allow forwarding of specific events within the archiving system to external services, such as
+campus management systems. This can be used to trigger specific actions in external systems, such as storing the path to
+an archived exam file for a given student inside a student record.
+
+The external event connectors differ from storage drivers in the way that they do not handle data storage but instead
+solely deliver information to external systems. This allows decoupling file storage from the remaining business logic of
+target institutions.
+
+[:fontawesome-solid-cubes: Component Details](components/external-event-connectors){ .md-button }
+
+
 ## Interfaces (APIs) and Signals
 
 !!! warning "TODO"

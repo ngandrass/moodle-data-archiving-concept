@@ -106,6 +106,7 @@ nav:
       - architecture/components/activity-archiving-drivers.md
       - architecture/components/worker-services.md
       - architecture/components/storage-drivers.md
+      - architecture/components/external-event-connectors.md
     - "Interfaces (APIs) and Signals":
       - architecture/interfaces/events.md
       - architecture/interfaces/activity-archiving-drivers.md
