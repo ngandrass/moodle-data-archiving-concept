@@ -21,7 +21,7 @@ driver exists for every Moodle activity that is supported by the archiving syste
     - Created archives are stored inside the Moodledata storage, awaiting further processing by the
       [Archiving Manager](../archiving-manager)
 
-!!! abstract "Archive Data Formwarding"
+!!! abstract "Archive Data Forwarding"
     Sends archived data back to the [Archiving Manager](#archiving-manager) once archiving is completed
 
 !!! abstract "Task Processing"
