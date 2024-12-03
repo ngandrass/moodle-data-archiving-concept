@@ -23,9 +23,10 @@ The following events are related to the top-level archiving jobs.
 | `\{{moodle_component_manager}}\event\archive_job_deleted`   | An archive job was deleted            | delete |                | Archive job     |
 
 
-## Activity archiving tasks
+## Activity Archiving Tasks
 
-The following events are used for the communication with the [activity archiving drivers](../../components/activity-archiving-drivers).
+The following events are used for the communication with the
+[activity archiving drivers](../../components/activity-archiving-drivers).
 
 | Class name                                                               | Trigger                                                                         | CRUD   | Payload                                      | Record snapshot |
 |--------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------|----------------------------------------------|-----------------|
@@ -36,7 +37,18 @@ The following events are used for the communication with the [activity archiving
 | `\{{moodle_component_manager}}_archiver_<activity>\event\task_aborted`   | An archive task for an activity of type `activity` was aborted gracefully       | update | Cause                                        | Task metadata   |
 
 
-## Storage tasks
+## External Event Connectors
+
+The following events are used for communication with
+[external event connectors](../../components/external-event-connectors).
+
+| Class name                                                                     | Trigger                                                                               | CRUD   | Payload                              | Record snapshot |
+|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|--------|--------------------------------------|-----------------|
+| `\{{moodle_component_manager}}_exteventcon_<eec>\event\transmission_completed` | Transmission of an event via an external event connector of type `eec` was successful | update | Service-specific metadata (optional) | Event object    |
+| `\{{moodle_component_manager}}_exteventcon_<eec>\event\transmission_failed`    | Transmission of an event via an external event connector of type `eec` failed         | update | Service-specific metadata (optional) | Event object    |
+
+
+## Storage Tasks
 
 The following events are used for the communication with the [storage drivers](../../components/storage-drivers).
 
@@ -57,11 +69,7 @@ The following events are used for the communication with the [storage drivers](.
 | `\{{moodle_component_manager}}_store_<storage>\event\write_task_aborted`   | A transfer to a storage of type `storage` was aborted gracefully        | update | Cause               | Task metadata   |
 
 
-## External event connectors
+## Worker Services
 
-The following events are used for communication with [external event connectors](../../components/external-event-connectors).
-
-| Class name                                                                     | Trigger                                                                               | CRUD   | Payload                              | Record snapshot |
-|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|--------|--------------------------------------|-----------------|
-| `\{{moodle_component_manager}}_exteventcon_<eec>\event\transmission_completed` | Transmission of an event via an external event connector of type `eec` was successful | update | Service-specific metadata (optional) | Event object    |
-| `\{{moodle_component_manager}}_exteventcon_<eec>\event\transmission_failed`    | Transmission of an event via an external event connector of type `eec` failed         | update | Service-specific metadata (optional) | Event object    |
+Worker services communicate via the Moodle external API and do not emit any events. Communication is handled directly
+within the respective [activity archiving drivers](../../components/activity-archiving-drivers).
