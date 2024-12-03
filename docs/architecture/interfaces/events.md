@@ -8,6 +8,7 @@ This document defines all events that are emitted by the archiving system to the
 !!! question "Check subplugin frankenstyle naming"
     It needs to be verified how the frankenstyle names of subplugins are generated. Adjust class names accordingly.
 
+
 ## Archive Jobs
 
 The following events are related to the top-level archiving jobs.
@@ -24,7 +25,7 @@ The following events are related to the top-level archiving jobs.
 
 ## Activity archiving tasks
 
-The following events are used for the communication with the activity archiving drivers.
+The following events are used for the communication with the [activity archiving drivers](../../components/activity-archiving-drivers).
 
 | Class name                                                               | Trigger                                                                         | CRUD   | Payload  | Record snapshot |
 |--------------------------------------------------------------------------|---------------------------------------------------------------------------------|--------|----------|-----------------|
@@ -37,7 +38,7 @@ The following events are used for the communication with the activity archiving 
 
 ## Storage tasks
 
-The following events are used for the communication with the storage drivers.
+The following events are used for the communication with the [storage drivers](../../components/storage-drivers).
 
 | Class name                                                                 | Trigger                                                                 | CRUD   | Payload  | Record snapshot |
 |----------------------------------------------------------------------------|-------------------------------------------------------------------------|--------|----------|-----------------|
@@ -54,3 +55,13 @@ The following events are used for the communication with the storage drivers.
 | `\{{moodle_component_manager}}_store_<storage>\event\write_task_completed` | An artifact was successfully transferred to a storage of type `storage` | update | {{todo}} | {{todo}}        |
 | `\{{moodle_component_manager}}_store_<storage>\event\write_task_failed`    | A transfer to a storage of type `storage` failed                        | update | {{todo}} | {{todo}}        |
 | `\{{moodle_component_manager}}_store_<storage>\event\write_task_aborted`   | A transfer to a storage of type `storage` was aborted gracefully        | update | {{todo}} | {{todo}}        |
+
+
+## External event connectors
+
+The following events are used for communication with [external event connectors](../../components/external-event-connectors).
+
+| Class name                                                                     | Trigger                                                                               | CRUD   | Payload                              | Record snapshot |
+|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|--------|--------------------------------------|-----------------|
+| `\{{moodle_component_manager}}_exteventcon_<eec>\event\transmission_completed` | Transmission of an event via an external event connector of type `eec` was successful | update | Service-specific metadata (optional) | Event object    |
+| `\{{moodle_component_manager}}_exteventcon_<eec>\event\transmission_failed`    | Transmission of an event via an external event connector of type `eec` failed         | update | Service-specific metadata (optional) | Event object    |
