@@ -35,6 +35,80 @@ Storage drivers are responsible for safely transferring a finished archive to a 
     Allowing independent configuration of the different available storage drivers (e.g., storage path, storage system
     credentials, ...)
 
+## Concept-Overview
+
+```mermaid
+classDiagram
+    class ArchivingManager {
+        +manageArchive(task: StorageTask): void
+    }
+
+    class StorageAPI {
+        +getStorageDriver(driver_type: str): StorageDriver
+    }
+
+    class StorageDriver {
+        <<interface>>
+        +store(data: any): void
+        +retrieve(key: str): any
+        +delete(key: str): void
+    }
+
+    class LocalFileStorageDriver {
+        +store(data: any): void
+        +retrieve(key: str): any
+        +delete(key: str): void
+    }
+
+    class S3StorageDriver {
+        +store(data: any): void
+        +retrieve(key: str): any
+        +delete(key: str): void
+    }
+
+    class NoSQLStorageDriver {
+        +store(data: any): void
+        +retrieve(key: str): any
+        +delete(key: str): void
+    }
+
+    class StorageDriverFactory {
+        +get_storage_driver(driver_type: str): StorageDriver
+    }
+
+    class NotificationService {
+        +notifySuccess(message: str): void
+        +notifyFailure(message: str): void
+    }
+
+    class ErrorHandler {
+        +handleError(error: Exception): void
+        +retryOperation(operation: Callable): void
+        +switchToAlternative(driver: StorageDriver): void
+        +restartWorker(): void
+    }
+
+    class Worker {
+        +processTask(task: StorageTask): void
+    }
+
+    class StorageTask {
+        +data: any
+        +operation: str
+    }
+
+    ArchivingManager --> StorageAPI : "requests driver"
+    StorageAPI --> StorageDriverFactory : "uses"
+    StorageDriverFactory --> StorageDriver : "creates"
+    Worker --> StorageDriver : "uses"
+    Worker --> ErrorHandler : "reports errors"
+    ErrorHandler --> NotificationService : "sends notifications"
+
+    StorageDriver <|.. LocalFileStorageDriver
+    StorageDriver <|.. S3StorageDriver
+    StorageDriver <|.. NoSQLStorageDriver
+
+```
 
 ## Interfaced Components
 
