@@ -67,14 +67,39 @@ target institutions.
 
 ## Interfaces (APIs) and Signals
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+In-depth descriptions of component interfaces (APIs), signals that are emitted via the Moodle Events API, and other
+details can be found in the respective sections linked below. An exhaustive list of all specification documents can be
+accessed via the navigation menu.
+
+### Archive Job States
+
+Describes the states an archive job can be in and the transitions between them.
+
+[:fontawesome-solid-cubes: Specification](interfaces/archive-job-states){ .md-button }
+
+### Events
+
+Defines all events that are emitted by the archiving system to the Moodle Events API.
+
+[:fontawesome-solid-cubes: Specification](interfaces/events){ .md-button }
+
+### Activity Archiving Drivers
+
+Defines the interface that activity archiving driver implementations must adhere to.
+
+[:fontawesome-solid-cubes: Specification](interfaces/activity-archiving-drivers){ .md-button }
+
+### Storage Drivers
+
+Defines the interface that storage driver implementations must adhere to.
+
+[:fontawesome-solid-cubes: Specification](interfaces/storage-drivers){ .md-button }
 
 
 ## Findings
 
 This sections lists various findings and implications that have been discovered during the design phase of the
-system architecture.
+system architecture. Please consider this as a work-in-progress note section.
 
 - Not all Moodle activities offer sub-plugin structures in which additional archiving plugins can be integrated.
     - `mod_quiz` offers an applicable sub-plugin structure (quiz report plugins), but `mod_assign` does not.
