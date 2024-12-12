@@ -21,7 +21,7 @@ the non-administrative user. It provides an overview of archivable data inside e
 been archived or not. The archiving manager keeps track of the whole archiving process and manages the various software
 components required for processing it.
 
-[:fontawesome-solid-cubes: Component Details](components/archiving-manager){ .md-button }
+[:fontawesome-solid-cubes: Component Details](components/archiving-manager.md){ .md-button }
 
 
 ### Activity Archiving Drivers
@@ -31,7 +31,7 @@ driver exists for every Moodle activity that is supported by the archiving syste
 relevant data from the activity, transform it into an archivable format, and returns the finished archive back to the
 archiving manager.
 
-[:fontawesome-solid-cubes: Component Details](components/activity-archiving-drivers){ .md-button }
+[:fontawesome-solid-cubes: Component Details](components/activity-archiving-drivers.md){ .md-button }
 
 
 ### Storage Drivers
@@ -40,7 +40,7 @@ Storage drivers are responsible for safely transferring a finished archive to a 
 for example, the Moodledata storage or an S3 compatible WORM storage. Having multiple storage drivers available allows
 for a flexible adaptation to existing archiving and storage systems.
 
-[:fontawesome-solid-cubes: Component Details](components/storage-drivers){ .md-button }
+[:fontawesome-solid-cubes: Component Details](components/storage-drivers.md){ .md-button }
 
 
 ### Worker Services
@@ -49,7 +49,7 @@ If an activity archiving driver requires additional or specific processing, it c
 designated worker service. Worker services not only offload heavy processing tasks from the Moodle system but also
 allow to handle complex transformations, such as rendering and exporting a quiz attempt page into a single PDF file.
 
-[:fontawesome-solid-cubes: Component Details](components/worker-services){ .md-button }
+[:fontawesome-solid-cubes: Component Details](components/worker-services.md){ .md-button }
 
 
 ### External Event Connectors
@@ -62,7 +62,7 @@ The external event connectors differ from storage drivers in the way that they d
 solely deliver information to external systems. This allows decoupling file storage from the remaining business logic of
 target institutions.
 
-[:fontawesome-solid-cubes: Component Details](components/external-event-connectors){ .md-button }
+[:fontawesome-solid-cubes: Component Details](components/external-event-connectors.md){ .md-button }
 
 
 ## Interfaces (APIs) and Signals
@@ -75,25 +75,25 @@ accessed via the navigation menu.
 
 Describes the states an archive job can be in and the transitions between them.
 
-[:fontawesome-solid-cubes: Specification](interfaces/archive-job-states){ .md-button }
+[:fontawesome-solid-cubes: Specification](interfaces/archive-job-states.md){ .md-button }
 
 ### Events
 
 Defines all events that are emitted by the archiving system to the Moodle Events API.
 
-[:fontawesome-solid-cubes: Specification](interfaces/events){ .md-button }
+[:fontawesome-solid-cubes: Specification](interfaces/events.md){ .md-button }
 
 ### Activity Archiving Drivers
 
 Defines the interface that activity archiving driver implementations must adhere to.
 
-[:fontawesome-solid-cubes: Specification](interfaces/activity-archiving-drivers){ .md-button }
+[:fontawesome-solid-cubes: Specification](interfaces/activity-archiving-drivers.md){ .md-button }
 
 ### Storage Drivers
 
 Defines the interface that storage driver implementations must adhere to.
 
-[:fontawesome-solid-cubes: Specification](interfaces/storage-drivers){ .md-button }
+[:fontawesome-solid-cubes: Specification](interfaces/storage-drivers.md){ .md-button }
 
 
 ## Findings

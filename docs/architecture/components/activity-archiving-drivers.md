@@ -13,16 +13,16 @@ driver exists for every Moodle activity that is supported by the archiving syste
     Transforms existing user data into an archivable format
     
     - Collects all relevant data from the activity (metadata, text submissions, files, ...)
-    - Can make use of [Worker Services](../worker-services), if required
+    - Can make use of [Worker Services](worker-services.md), if required
 
 !!! abstract "Archive Creation"
     Creates digital archive files
     
     - Created archives are stored inside the Moodledata storage, awaiting further processing by the
-      [Archiving Manager](../archiving-manager)
+      [Archiving Manager](archiving-manager.md)
 
 !!! abstract "Archive Data Forwarding"
-    Sends archived data back to the [Archiving Manager](#archiving-manager) once archiving is completed
+    Sends archived data back to the [Archiving Manager](archiving-manager.md) once archiving is completed
 
 !!! abstract "Task Processing"
     - All archiving jobs are always executed asynchronously
@@ -38,8 +38,8 @@ driver exists for every Moodle activity that is supported by the archiving syste
 
 ## Interfaced Components
 
-- [Archiving Manager](../archiving-manager)
-- [Worker Services](../worker-services) (Optional)
+- [Archiving Manager](archiving-manager.md)
+- [Worker Services](worker-services.md) (Optional)
 
 
 ## Implementations

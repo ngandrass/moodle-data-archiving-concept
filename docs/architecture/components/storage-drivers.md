@@ -38,7 +38,7 @@ Storage drivers are responsible for safely transferring a finished archive to a 
 
 ## Interfaced Components
 
-- [Archiving Manager](../archiving-manager)
+- [Archiving Manager](archiving-manager.md)
 
 
 ## Implementations

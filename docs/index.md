@@ -5,11 +5,11 @@ long-term storage independent of Moodle.
 
 It is divided into the following chapters:
 
-[:material-flask: (1) Analysis of Technical Landscape](analysis){.md-button}
+[:material-flask: (1) Analysis of Technical Landscape](analysis/index.md){.md-button}
 
-[:material-clipboard-list-outline: (2) Requirements Engineering](requirements){.md-button}
+[:material-clipboard-list-outline: (2) Requirements Engineering](requirements/index.md){.md-button}
 
-[:material-floor-plan: (3) Architecture and Technical Specification](architecture){.md-button}
+[:material-floor-plan: (3) Architecture and Technical Specification](architecture/index.md){.md-button}
 
 <!-- [:material-cogs: (4) Implementation](implementation){.md-button} -->
 

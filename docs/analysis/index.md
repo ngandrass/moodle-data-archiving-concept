@@ -5,6 +5,6 @@ landscape within this topic.
 
 You can navigate through the contents of this chapter by using the buttons below:
 
-[:material-list-box-outline: (1) Overview of existing solutions](existingsolutions){ .md-button }
+[:material-list-box-outline: (1) Overview of existing solutions](existingsolutions.md){ .md-button }
 
-[:material-flask: (2) Analysis of data within Moodle activities](data-analysis){ .md-button }
+[:material-flask: (2) Analysis of data within Moodle activities](data-analysis.md){ .md-button }

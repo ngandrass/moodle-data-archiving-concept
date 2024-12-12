@@ -1,6 +1,6 @@
 # Worker Services
 
-Worker services can be used by [activity archiving drivers](../activity-archiving-drivers) to offload heavy processing
+Worker services can be used by [activity archiving drivers](activity-archiving-drivers.md) to offload heavy processing
 tasks from the Moodle system and enable the archiving system to perform complex transformations.
 
 !!! warning "Work in Progress (WIP)"
@@ -37,7 +37,7 @@ tasks from the Moodle system and enable the archiving system to perform complex 
 
 ## Interfaced Components
 
-- [Activity Archiving Drivers](../activity-archiving-drivers)
+- [Activity Archiving Drivers](activity-archiving-drivers.md)
 
 
 ## Implementations

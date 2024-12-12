@@ -4,8 +4,8 @@ This section contains user stories that were identified during a stakeholder wor
 e-learning personal and IT administrators of various universities from Germany, Austria, and Switzerland as well as from
 multiple personal interviews.
 
-Together with the [generic base requirements](../base-requirements), they form the base for formulating concrete
-feature requests for and to establish the technical architecture drafts of the aspired archiving solution on.
+Together with the [generic base requirements](base-requirements.md), they form the base for formulating concrete feature
+requests for and to establish the technical architecture drafts of the aspired archiving solution on.
 
 
 ## Stakeholders

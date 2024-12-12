@@ -19,7 +19,7 @@ The archiving manager is the central entry point for archiving tasks.
     Managing archiving tasks as distinct jobs
 
     - Create, inspect, delete archiving jobs
-    - Delegates archiving of activity data to the respective [Activity Archiving Drivers](activity-archiving-drivers)
+    - Delegates archiving of activity data to the respective [Activity Archiving Drivers](activity-archiving-drivers.md)
     - Displays progress and status of archiving jobs
     - Handling of multiple archiving jobs in parallel
 
@@ -55,8 +55,8 @@ The archiving manager is the central entry point for archiving tasks.
 
 ## Interfaced Components
 
-- [Activity Archiving Drivers](../activity-archiving-drivers)
-- [Storage Drivers](../storage-drivers)
+- [Activity Archiving Drivers](activity-archiving-drivers.md)
+- [Storage Drivers](storage-drivers.md)
 
 
 ## Details

@@ -14,7 +14,7 @@ an archived exam file for a given student inside a student record.
     Forwards specific events to external systems, such as the successful creation of a new artifact for a student.
 
     - External event connectors primarily transmit information / metadata. Full archive files are primarily transmitted by
-      the respective [storage drivers](../storage-drivers).
+      the respective [storage drivers](storage-drivers.md).
 
 !!! abstract "Transformation of Data"
     Transforms internal event data into a format that is understandable by the external system.
@@ -25,7 +25,7 @@ an archived exam file for a given student inside a student record.
 
 ## Interfaced Components
 
-- [Archiving Manager](../archiving-manager)
+- [Archiving Manager](archiving-manager.md)
 
 
 ## Implementations
