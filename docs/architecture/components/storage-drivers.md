@@ -37,75 +37,80 @@ Storage drivers are responsible for safely transferring a finished archive to a 
 
 ## Concept Overview
 ```mermaid
-classDiagram
-    class ArchivingManager {
-        +manageArchive(task: StorageTask): void
+classDiagram 
+    namespace ArchivingLogic{
+        class ArchivingManager {
+            +manageArchive(task: StorageTask): void
+        }
+        class StorageTask {
+            +data: any
+            +operation: str
+        }   
     }
+    namespace Supporting{
+        class LoggingMechanism {
+            +logRequest(source: str, action: str, data: any): void
+            +logActivity(source: str, message: str): void
+        }
+            class NotificationService {
+            +notifySuccess(message: str): void
+            +notifyFailure(message: str): void
+        }
 
-    class StorageAPI {
-        +getStorageDriver(driver_type: str): StorageDriver
+        class ErrorHandler {
+            +handleError(error: Exception): void
+            +retryOperation(operation: Callable): void
+            +switchToAlternative(driver: StorageDriver): void
+            +restartWorker(): void
+        }
     }
+    namespace Storing{
+        class StorageAPI {
+            +getStorageDriver(driver_type: str): StorageDriver
+        }
 
-    class StorageDriver {
-        <<interface>>
-        +store(data: any): void
-        +retrieve(key: str): any
-        +delete(key: str): void
-    }
+        class StorageDriver {
+            <<interface>>
+            +store(data: any): void
+            +retrieve(key: str): any
+            +delete(key: str): void
+        }
 
-    class LocalFileStorageDriver {
-        +store(data: any): void
-        +retrieve(key: str): any
-        +delete(key: str): void
-    }
+        class LocalFileStorageDriver {
+            +store(data: any): void
+            +retrieve(key: str): any
+            +delete(key: str): void
+        }
 
-    class S3StorageDriver {
-        +store(data: any): void
-        +retrieve(key: str): any
-        +delete(key: str): void
-    }
+        class S3StorageDriver {
+            +store(data: any): void
+            +retrieve(key: str): any
+            +delete(key: str): void
+        }
 
-    class NoSQLStorageDriver {
-        +store(data: any): void
-        +retrieve(key: str): any
-        +delete(key: str): void
-    }
+        class NoSQLStorageDriver {
+            +store(data: any): void
+            +retrieve(key: str): any
+            +delete(key: str): void
+        }
 
-    class StorageDriverFactory {
-        +get_storage_driver(driver_type: str): StorageDriver
-    }
+        class StorageDriverFactory {
+            +get_storage_driver(driver_type: str): StorageDriver
+        }
 
-    class NotificationService {
-        +notifySuccess(message: str): void
-        +notifyFailure(message: str): void
-    }
-
-    class ErrorHandler {
-        +handleError(error: Exception): void
-        +retryOperation(operation: Callable): void
-        +switchToAlternative(driver: StorageDriver): void
-        +restartWorker(): void
-    }
-
-    class Worker {
-        +processTask(task: StorageTask): void
-    }
-
-    class StorageTask {
-        +data: any
-        +operation: str
-    }
-
-    class LoggingMechanism {
-        +logRequest(source: str, action: str, data: any): void
-        +logActivity(source: str, message: str): void
+        class AsyncTask {
+            +processTask(task: StorageTask): void
+        }
     }
 
     ArchivingManager --> StorageAPI : "requests driver"
+    ArchivingManager --> ErrorHandler : "reports erros"
+    ArchivingManager --> LoggingMechanism : "logs activities"
+    NotificationService --> ArchivingManager : "listens for notifications"
     StorageAPI --> StorageDriverFactory : "uses"
     StorageDriverFactory --> StorageDriver : "creates"
-    Worker --> StorageDriver : "uses"
-    Worker --> ErrorHandler : "reports errors"
+    AsyncTask --> StorageDriver : "uses"
+    AsyncTask --> ErrorHandler : "reports errors"
     ErrorHandler --> NotificationService : "sends notifications"
     StorageAPI --> LoggingMechanism : "logs requests"
     StorageDriverFactory --> LoggingMechanism : "logs activities"
@@ -127,8 +132,8 @@ classDiagram
 3. **Extension Point via Strategy Pattern**  
     Using the Strategy Pattern enables the flexible integration of different storage solutions. New StorageDrivers can be added without modifying the existing application, simply by providing a new implementation.
     
-4. **Logging Mechanism**  
-    A logging mechanism records detailed information about what data was stored, when, and where. These logs support traceability of operations and assist in error analysis.
+4. **Logging / Notification Mechanism**  
+    A logging mechanism records detailed information about what data was stored, when, and where. These logs support traceability of operations and assist in error analysis. Defines log and error levels and is responsible for managing the error status.
 
 
 ## Interfaced Components
