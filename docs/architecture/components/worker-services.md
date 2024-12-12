@@ -3,8 +3,8 @@
 Worker services can be used by [activity archiving drivers](../activity-archiving-drivers) to offload heavy processing
 tasks from the Moodle system and enable the archiving system to perform complex transformations.
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
 
 
 ## Tasks and Responsibilities

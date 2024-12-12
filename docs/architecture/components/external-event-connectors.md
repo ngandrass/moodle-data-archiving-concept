@@ -4,8 +4,8 @@ External event connectors allow forwarding of specific events within the archivi
 campus management systems. This can be used to trigger specific actions in external systems, such as storing the path to
 an archived exam file for a given student inside a student record.
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
 
 
 ## Tasks and Responsibilities

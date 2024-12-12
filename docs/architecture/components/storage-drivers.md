@@ -2,8 +2,8 @@
 
 Storage drivers are responsible for safely transferring a finished archive to a specific storage location.
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
 
 
 ## Tasks and Responsibilities

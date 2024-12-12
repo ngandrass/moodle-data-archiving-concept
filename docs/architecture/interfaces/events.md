@@ -2,8 +2,8 @@
 
 This document defines all events that are emitted by the archiving system to the Moodle Events API.
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
 
 !!! question "Check subplugin frankenstyle naming"
     It needs to be verified how the frankenstyle names of subplugins are generated. Adjust class names accordingly.

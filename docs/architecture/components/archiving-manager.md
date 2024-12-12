@@ -2,8 +2,8 @@
 
 The archiving manager is the central entry point for archiving tasks.
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
 
 
 ## Tasks and Responsibilities

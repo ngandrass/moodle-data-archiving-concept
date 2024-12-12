@@ -2,8 +2,9 @@
 
 This document defines the interface that [storage driver](../../components/storage-drivers) implementations must adhere to.
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
+
 
 ## Overview
 ```mermaid

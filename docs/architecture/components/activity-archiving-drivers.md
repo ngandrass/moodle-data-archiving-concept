@@ -3,8 +3,8 @@
 The activity archiving drivers are responsible for the actual archiving process of a specific Moodle activity. One such
 driver exists for every Moodle activity that is supported by the archiving system.
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
 
 
 ## Tasks and Responsibilities
@@ -46,9 +46,6 @@ driver exists for every Moodle activity that is supported by the archiving syste
 
 ### Quiz (mod_quiz)
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
-
 - Exports quiz attempts as fully-rendered PDF files
 - Support for complex content and question types, including Drag and Drop, MathJax formulas, STACK plots, and other
   question / content types that require JavaScript processing
@@ -63,9 +60,6 @@ driver exists for every Moodle activity that is supported by the archiving syste
 
 
 ### Assignment (mod_assign)
-
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
 
 - Exports ...
     - Assignment metadata, instructions, text submissions, submission metadata, grading, feedback, and comments as PDF

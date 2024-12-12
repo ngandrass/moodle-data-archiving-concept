@@ -3,8 +3,9 @@
 This document describes the states an archive job can be in and the transitions between them. Archive jobs are created
 and managed by the [archiving manager](../../components/archiving-manager).
 
-!!! warning "TODO"
-    This section is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+!!! warning "Work in Progress (WIP)"
+    This section is still under active development. Information and specifications can still be changed in the future.
+
 
 ## Overview
 
