@@ -1,9 +1,9 @@
 # Architecture
 
-!!! warning "TODO"
-    This document is still work in progress (WIP) and might contain incomplete, incorrect, or outdated information.
+This document provides a high-level introduction to the architecture of the Moodle Data Archiving System. It describes
+the different components of the system, their responsibilities, and how they interact with each other.
 
-TODO
+Each component is described in detail in its own subsection, linked below every component description.
 
 
 ## Components
