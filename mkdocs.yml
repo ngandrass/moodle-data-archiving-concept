@@ -94,6 +94,7 @@ extra_css:
 
 nav:
   - "Introduction": index.md
+  - "Roadmap": roadmap.md
   - "Changelog": changelog.md
 
   - "Analysis":
