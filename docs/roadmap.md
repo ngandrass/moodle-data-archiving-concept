@@ -90,28 +90,46 @@ The state of each Milestone is depicted by the respective icon and color:
     [:material-package-variant-closed: Show Results](architecture/index.md){.md-button}
 
 !!! abstract "Public availability of this document and project sources"
-    TODO
+    Making this document and the project sources publicly available on GitHub.
 
 !!! abstract "Presentation within the Moodle community"
-    TODO
+    Present this work and the next steps within the Moodle community to get the news out, gather feedback, and
+    potentially find early adopters as well as potential contributors.
 
 !!! note "Prototype implementation"
-    TODO
+    Creating a prototypical implementation of the aspired archiving solution for a single Moodle activity. This shall
+    include all core components and interfaces as defined in the technical architecture draft. The prototype should be
+    limited to a single Moodle activity and a single storage backend.
 
 !!! abstract "Re-evaluation of the technical architecture"
-    TODO
+    Re-evaluating the technical architecture based on the insights gained during the prototype implementation. Adjusting
+    the architecture where necessary and refining the interfaces and components.
+
+!!! abstract "Automated tests"
+    Creating automated tests for all central components of the archiving solution. Tests must be automatically
+    executed by a CI pipeline and be mandatory for every release. Tests must cover all supported Moodle, PHP, and
+    database versions to lessen the likelihood for regressions.
 
 !!! abstract "Full implementation of the archiving solution for a single activity"
-    TODO
+    Implementing the full set of features for a single Moodle activity. This implementation should represent a reference
+    implementation to be used as a guideline for further activities, storage backends, and other extensions.
 
 !!! abstract "Stable release on GitHub for early-adopters"
-    TODO
+    Publishing a stable release on GitHub to allow early adopters to test the solution in their environments. This shall
+    also constitute a base for further feedback and potential contributions.
 
 !!! abstract "User and administrator documentation"
-    TODO
+    Creating comprehensive documentation for users and administrators of the archiving solution. This documentation
+    should cover installation, configuration, usage, and troubleshooting.
 
 !!! abstract "Implementing additional activities, storage backens, ..."
-    TODO
+    Implementing support for additional Moodle activities, storage backends, and other customizations.
 
 !!! abstract "Release within the Moodle Plugin Directory"
-    TODO
+    Releasing the archiving solution to the wide public via the Moodle Plugin Directory. For this release, the archiving
+    system must not only be stable and tested, but also extensive documentation and help resources must be available.
+
+!!! abstract "Ensuring Maintenance"
+    Ensuring the maintenance of the archiving solution by creating a sustainable development and support structure. This
+    can, apart from creating an open-source community around the project, also include appointing designated maintainers
+    and support contacts at different universities.
