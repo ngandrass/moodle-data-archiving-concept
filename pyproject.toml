@@ -5,6 +5,7 @@ description = "MKDocs based documentation generator for conteptual drafts for a 
 authors = ["Niels Gandraß <niels@gandrass.de>"]
 license = "GNU General Public License v3.0"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
