@@ -19,6 +19,13 @@ This document is divided into the following chapters:
 _You can navigate to each section using the buttons above or jump to each document individually using the tree
 navigation on the left side._
 
+## Current State and Roadmap
+
+You can find information about the current state of this project as well as an overview of already achieved milestones
+and their results on the [Roadmap](roadmap.md) page.
+
+[:material-road-variant: Show Roadmap](roadmap.md){.md-button}
+
 
 ## License
 
