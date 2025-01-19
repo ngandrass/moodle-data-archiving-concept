@@ -1,6 +1,8 @@
 # Roadmap
 
 This page outlines the planned steps and milestones for the development of the aspired Moodle Data Archiving Solution.
+Listed milestones possess a certain order but are not guaranteed to be completed in the exact order listed below.
+
 
 ### Legend
 
