@@ -8,10 +8,17 @@ Listed milestones possess a certain order but are not guaranteed to be completed
 
 The state of each Milestone is depicted by the respective icon and color:
 
-<div style="max-width: 200px;" markdown>
-- !!! success "Completed"
-- !!! note "In progress"
-- !!! abstract "Not started yet"
+<div style="
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    justify-content: center;
+" markdown>
+!!! success "Completed"
+!!! note "In progress"
+!!! abstract "Not started yet"
 </div>
 
 ### Milestones
