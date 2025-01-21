@@ -1,5 +1,5 @@
 site_name: Moodle Data Archiving Concept
-site_url: ""
+site_url: "https://ngandrass.github.io/moodle-data-archiving-concept"
 use_directory_urls: !ENV [OFFLINE, true]
 repo_url: https://github.com/ngandrass/moodle-data-archiving-concept
 edit_uri: edit/master/docs/
