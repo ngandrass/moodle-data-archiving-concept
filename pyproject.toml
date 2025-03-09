@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "moodle-data-archiving-concept"
-version = "0.1.0"
+version = "1.1.0"
 description = "MKDocs based documentation generator for conteptual drafts for a generic archiving of exam data from the Moodle LMS"
 authors = ["Niels Gandraß <niels@gandrass.de>"]
 license = "GNU General Public License v3.0"
