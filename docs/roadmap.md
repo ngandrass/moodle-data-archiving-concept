@@ -98,8 +98,13 @@ The state of each Milestone is depicted by the respective icon and color:
 
     [:material-package-variant-closed: Show Results](architecture/index.md){.md-button}
 
-!!! abstract "Public availability of this document and project sources"
+!!! success "Public availability of this document and project sources"
     Making this document and the project sources publicly available on GitHub.
+
+    This task is completed. The public repository can be found here:
+    [ngandrass/moodle-data-archiving-concept](https://github.com/ngandrass/moodle-data-archiving-concept)
+
+    [:material-github: View Repository](https://github.com/ngandrass/moodle-data-archiving-concept){:target="_blank" .md-button}
 
 !!! abstract "Presentation within the Moodle community"
     Present this work and the next steps within the Moodle community to get the news out, gather feedback, and
