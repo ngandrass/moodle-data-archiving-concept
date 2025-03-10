@@ -1,5 +1,16 @@
 # Moodle Data Archiving Concept
 
+[![Latest Version](https://img.shields.io/github/v/release/ngandrass/moodle-data-archiving-concept)](https://github.com/ngandrass/moodle-data-archiving-concept/releases)
+[![Maintenance Status](https://img.shields.io/maintenance/yes/9999)](https://github.com/ngandrass/moodle-data-archiving-concept/)
+[![License](https://img.shields.io/github/license/ngandrass/moodle-data-archiving-concept)](https://github.com/ngandrass/moodle-data-archiving-concept/blob/master/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/ngandrass/moodle-data-archiving-concept)](https://github.com/ngandrass/moodle-data-archiving-concept/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/ngandrass/moodle-data-archiving-concept)](https://github.com/ngandrass/moodle-data-archiving-concept/pulls)
+[![Donate with PayPal](https://img.shields.io/badge/PayPal-donate-orange)](https://www.paypal.me/ngandrass)
+[![Sponsor with GitHub](https://img.shields.io/badge/GitHub-sponsor-orange)](https://github.com/sponsors/ngandrass)
+[![GitHub Stars](https://img.shields.io/github/stars/ngandrass/moodle-data-archiving-concept?style=social)](https://github.com/ngandrass/moodle-data-archiving-concept/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/ngandrass/moodle-data-archiving-concept?style=social)](https://github.com/ngandrass/moodle-data-archiving-concept/network/members)
+[![GitHub Contributors](https://img.shields.io/github/contributors/ngandrass/moodle-data-archiving-concept?style=social)](https://github.com/ngandrass/moodle-data-archiving-concept/graphs/contributors)
+
 Meta repository containing conceptual drafts for generic archiving of exam data from the Moodle LMS.
 
 This collection of documents describes an extensive concept for archiving data from various Moodle activities for
