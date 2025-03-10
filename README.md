@@ -1,7 +1,10 @@
-# moodle-data-archiving-concept
+# Moodle Data Archiving Concept
 
-Meta repository containing conceptual drafts for generic archiving of exam data from the Moodle LMS
+Meta repository containing conceptual drafts for generic archiving of exam data from the Moodle LMS.
 
+This collection of documents describes an extensive concept for archiving data from various Moodle activities for
+long-term storage independent of Moodle. This includes an analysis of the archivable data within Moodle, respective
+requirements engineering, and a technical specification for the aspired archiving solution.
 
 The full table of contents is available online within the [concept document](https://ngandrass.github.io/moodle-data-archiving-concept/).
 
