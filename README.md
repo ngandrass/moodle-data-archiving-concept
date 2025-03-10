@@ -20,7 +20,7 @@ requirements engineering, and a technical specification for the aspired archivin
 The full table of contents is available online within the [concept document](https://ngandrass.github.io/moodle-data-archiving-concept/).
 
 
-## Viewing the specification document
+## Viewing the Specification Document
 
 You can always find the most recent version of the specification document here: \
 https://ngandrass.github.io/moodle-data-archiving-concept/
@@ -28,7 +28,13 @@ https://ngandrass.github.io/moodle-data-archiving-concept/
 [![Open concept document](docs/assets/images/btn-open-document.png)](https://ngandrass.github.io/moodle-data-archiving-concept/)
 
 
-## Building the specification document
+## Contributing and Providing Feedback
+
+Your feedback and contributions are more than welcome! Please feel free to open an issue here on GitHub or to reach out
+us directly via email. Of course, you can also directly provide a respective pull request with your desired changes.
+
+
+## Building the Specification Document
 
 Prior to any build, you have to install the dependencies using [Poetry](https://python-poetry.org/):
 
