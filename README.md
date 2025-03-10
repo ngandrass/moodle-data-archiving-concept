@@ -3,7 +3,18 @@
 Meta repository containing conceptual drafts for generic archiving of exam data from the Moodle LMS
 
 
-## Building
+The full table of contents is available online within the [concept document](https://ngandrass.github.io/moodle-data-archiving-concept/).
+
+
+## Viewing the specification document
+
+You can always find the most recent version of the specification document here: \
+https://ngandrass.github.io/moodle-data-archiving-concept/
+
+[![Open concept document](docs/assets/images/btn-open-document.png)](https://ngandrass.github.io/moodle-data-archiving-concept/)
+
+
+## Building the specification document
 
 Prior to any build, you have to install the dependencies using [Poetry](https://python-poetry.org/):
 
